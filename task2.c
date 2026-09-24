@@ -22,17 +22,14 @@ int main() {
     // Get input values
     printf("Enter the temperature value: ");
     if (scanf("%lf", &temp) != 1) { // scanf will be 1(true) if it worked, so will be 0(false) with anything other than a float here
-        printf("Invlaid temperature./n");
+        printf("Invlaid temperature.\n");
         return 1; //ends program with 1 indicating an error happend 
     }
 
     printf("Enter the original scale (F, C, or K): ");
     scanf(" %c", &unit); //space before %C to get rid of any leading white space
 
-    printf("Enter the scale to convert to (F, C, or K): ");
-    scanf(" %c", &want);
-
-    // Convert input temperature to Celsius
+    //Convert input temperature to Celsius
     if (unit == 'C' || unit == 'c') {
         temp_in_celsius = temp;
     } else if (unit == 'F' || unit == 'f') {
@@ -44,6 +41,10 @@ int main() {
         return 1;
     }
 
+    printf("Enter the scale to convert to (F, C, or K): ");
+    scanf(" %c", &want);
+   
+    
     // Convert Celsius to the desired target scale
     if (want == 'C' || want == 'c') {
         converted_temp = temp_in_celsius;
