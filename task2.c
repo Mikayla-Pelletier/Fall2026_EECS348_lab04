@@ -1,3 +1,15 @@
+// File: task2.c
+// Author: Mikayla Pelletier
+// Creation date: 9/23/2026
+// Revision date: 9/24/2026
+// Collaborators: None
+// Other sources for the code: None
+// Description: takes in a temp and scale can converts to different scale and prints a category for that temp
+// Inputs: Number for temp (float and int both work). F,C,or K for original scale of temp and desired scale of temp
+// Outputs: New temp in desired scale and temp categrory and weather advisory.
+// Revisions: Added comments
+
+
 //inputs not case sensitive
 
 
@@ -9,7 +21,7 @@ int main() {
 
     // Get input values
     printf("Enter the temperature value: ");
-    if (scanf("%lf", &temp) != 1) { // scanf will be 1(true) if it worked, so will be 2(false) with anything other than a float here
+    if (scanf("%lf", &temp) != 1) { // scanf will be 1(true) if it worked, so will be 0(false) with anything other than a float here
         printf("Invlaid temperature./n");
         return 1; //ends program with 1 indicating an error happend 
     }

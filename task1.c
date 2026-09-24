@@ -1,3 +1,14 @@
+// File: task1.c
+// Author: Mikayla Pelletier
+// Creation date: 9/23/2026
+// Revision date: 9/24/2026
+// Collaborators: None
+// Other sources for the code: None
+// Description: takes a football score and gives all possible combination of ways that score could have been achieved
+// Inputs: Int for score
+// Outputs: Every possible combination of ways to get that score until user enters 1
+// Revisions: Added comments
+
 #include <stdio.h>
 
 int main() {
@@ -5,8 +16,9 @@ int main() {
 
     while (1) {
         printf("Enter the NFL score (Enter 1 to stop): ");
-        if (scanf("%d", &score) != 1) {
-            break; // Handle non-integers
+        if (scanf("%d", &score) != 1) { //user input
+            printf("Invalid score input. Please enter a number\n");
+            return 1; // Handle non-integers
         }
 
         if (score <= 1) {
@@ -37,7 +49,7 @@ int main() {
                 }
             }
         }
-        printf("\n"); // Print an empty line for readability between rounds
+        printf("\n"); // Enters between rounds
     }
 
     return 0;
